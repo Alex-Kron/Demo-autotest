@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <parameter name="driverPath" value="./src/test/resources/chromedriver"/>
+    <parameter name="bookStoreUri" value="https://demoqa.com/books"/>
+    <parameter name="profileUri" value="https://demoqa.com/profile"/>
+    <parameter name="loginUri" value="https://demoqa.com/login"/>
+    <parameter name="registeredAccountLogin" value="Krondev"/>
+    <parameter name="registeredAccountPassword" value="Rhjndev$_2005"/>
+
+    <test name="LoginTest">
+        <groups>
+            <run>
+                <include name="login"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.alexkron.test.EnterToProfileTest"/>
+        </classes>
+    </test>
+
+    <test name="SearchTest">
+        <groups>
+            <run>
+                <include name="search"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.alexkron.test.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="PaginationTest">
+        <groups>
+            <run>
+                <include name="pagination"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.alexkron.test.PaginationTest"/>
+        </classes>
+    </test>
+</suite>
